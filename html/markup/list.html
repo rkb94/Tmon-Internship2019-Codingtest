@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,width=device-width">
+    <title>TMON :: 목록</title>
+    <link rel="stylesheet" href="../../css/test.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/directives.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/friendList.js"></script>
+</head>
+<body class="list_wrap" ng-app="chatApp">
+<section class="ct" ng-controller="Controller">
+    <h1 class="skip">목록페이지</h1>
+    <div class="container">
+        <div class="container_overflow">
+            <ul class="item_wrap">
+                <!-- [D] 이전대화가 있을 경우 : new 클래스 추가 -->
+                <span ng-repeat="friend in friends" ng-click="chat(friend)">
+                    <list-data></list-data>
+                </span>
+
+            </ul>
+        </div>
+    </div>
+    <div class="button_wrap">
+        <!-- [D] 선택 상태 : selected 클래스 추가 -->
+        <!-- [D] 비활성화 상태 : disabled 클래스 추가, disabled 속성 추가-->
+        <button type="button" class="selected">친구</button>
+        <button type="button" class="disabled" disabled>대화</button>
+    </div>
+</section>
+</body>
+<script>
+
+
+</script>
+</html>
